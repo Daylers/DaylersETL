@@ -1,0 +1,44 @@
+{
+  "name": "test-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "airflow",
+    "database.password": "airflow",
+    "database.dbname": "khd",
+    "database.server.name": "dbserver1",
+    "plugin.name": "pgoutput",
+    "slot.name": "debezium_test_slot1",
+    "publication.name": "debezium_test_pub1",
+    "table.include.list": "dev_cbrspb_tmd.etl_data_flow",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter.schemas.enable": "false",
+    "topic.prefix": "khd"
+  },  
+  "name": "dev_cbrspb_tmd.etl_pkg",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "airflow",
+    "database.password": "airflow",
+    "database.dbname": "khd",
+    "database.server.name": "dbserver1",
+    "plugin.name": "pgoutput",
+    "slot.name": "debezium_test_slot2",
+    "publication.name": "debezium_test_pub2",
+    "table.include.list": "dev_cbrspb_tmd.etl_pkg",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter.schemas.enable": "false",
+    "topic.prefix": "khd",
+	
+	
+    "decimal.handling.mode": "string",
+    "time.precision.mode": "adaptive_time_microseconds"
+  }  
+}

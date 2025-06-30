@@ -63,9 +63,9 @@ services:
 
   clickhouse:
     image: yandex/clickhouse-server:latest
-    environment:
-      CLICKHOUSE_USER: ${CLICKHOUSE_USER}
-      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
+    #environment:
+      #CLICKHOUSE_USER: ${CLICKHOUSE_USER}
+      #CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
     ports:
       - "8123:8123"
       - "9000:9000"
@@ -283,7 +283,7 @@ services:
         kafka-connect:
           condition: service_healthy
       volumes:
-        - ./connector.json:/connector.json
+        - ./debezium-kafka-connectors/connector.json:/connector.json
       entrypoint: >
         sh -c "
           echo 'Waiting for Kafka Connect...';

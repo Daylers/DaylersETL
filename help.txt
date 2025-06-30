@@ -1,1 +1,11 @@
 curl -X POST http://localhost:8083/connectors   -H "Content-Type: application/json"   -d @connector.json
+
+docker-compose up -d kafka kafka-ui kafka-connect register-connector
+
+winpty docker exec -it 5daylersetl-clickhouse bash
+
+
+docker exec 64c71e6e002f service clickhouse-server restart
+docker cp 64c71e6e002f:/etc/clickhouse-server/users.xml ./users.xml
+docker cp ./users.xml 64c71e6e002f:/etc/clickhouse-server/users.xml
+
