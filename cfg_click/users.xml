@@ -98,8 +98,18 @@
             <quota>default</quota>
 
             <!-- User can create other users and grant rights to them. -->
-            <!-- <access_management>1</access_management> -->
+            <access_management>1</access_management>
         </default>
+		
+		<admin>
+          <profile>default</profile>
+          <networks>
+            <ip>::/0</ip>
+          </networks>
+          <password>admin</password>
+          <quota>default</quota>
+          <access_management>1</access_management>
+        </admin>
     </users>
 
     <!-- Quotas. -->
