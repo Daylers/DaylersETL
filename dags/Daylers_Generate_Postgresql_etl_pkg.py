@@ -16,11 +16,11 @@ default_args = {
 }
 
 dag = DAG(
-    dag_id='Daylers_Generate_Postgresql_etl_data_flow',
+    dag_id='Daylers_Generate_Postgresql_etl_pkg',
     default_args=default_args,
-    schedule_interval='*/10 * * * *', #запуск каждую минуту
+    schedule_interval='*/10 * * * *', #запуск каждые 10 минут
     catchup=False,
-    tags=['technical', 'etl_data_flow']
+    tags=['technical', 'pg', 'etl_pkg']
 )
 
 def _generate_data_etl_data_flow():

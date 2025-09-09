@@ -13,4 +13,4 @@ primary key pkg_sqn;
 
 
 select * from DM.etl_pkg
-order by pkg_ sqn asc;
+order by pkg_sqn asc;

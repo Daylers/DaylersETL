@@ -9,7 +9,7 @@
   If you have accidentally specified user-level settings here, server won't start.
   You can either move the settings to the right place inside "users.xml" file
    or add <skip_check_for_incorrect_settings>1</skip_check_for_incorrect_settings> here.
---><clickhouse>
+--><yandex>
     <logger>
         <!-- Possible levels [1]:
 
@@ -1306,4 +1306,4 @@
         <console>1</console>
     </logger>
     -->
-</clickhouse>
+</yandex>

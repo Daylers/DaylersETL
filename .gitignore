@@ -8,7 +8,11 @@ superset_data/
 dags/__pycache__/
 clickhouse/*
 !clickhouse/init
+clickhouse1/*
+!clickhouse1/init
+clickhouse2/*
+!clickhouse2/init
 dags/.DS_Store
 .DS_Store
 s3_storage/
-temp/synthetic_data/output.csv
+synthetic_data/
